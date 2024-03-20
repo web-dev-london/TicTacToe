@@ -14,7 +14,19 @@ body {
   font-family: 'Permanent Marker', cursive;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.5;
 }
+#game__container {
+  text-align: center;
+  padding: 3rem;
+}
+
+#game__header {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  letter-spacing: 2.2px;
+}
+
 #game__cells {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -40,4 +52,18 @@ body {
     :nth-of-type(-3n + 6)
   ) {
   border-right: none;
+}
+
+.game__footer {
+  margin-top: 2rem;
+}
+#game__status {
+  font-size: 2rem;
+  letter-spacing: 2.2px;
+}
+
+#game__restart {
+  padding: 1rem 2.5rem;
+  font-size: 1.6rem;
+  margin-top: 1rem;
 }
