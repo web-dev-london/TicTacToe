@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#game__cells {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 22rem;
+  margin: auto;
+}
+
+.game__cell {
+  width: 8rem;
+  height: 8rem;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  cursor: pointer;
+}
+.game__cell:nth-of-type(-1n + 6) {
+  border-bottom: none;
+}
+.game__cell:nth-of-type(-1n + 8):not(
+    :nth-of-type(-3n + 6)
+  ) {
+  border-right: none;
+}
