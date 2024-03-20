@@ -48,6 +48,7 @@ function changePlayer() {
   currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
   gameStatus.textContent = `${currentPlayer}'s turn`;
 }
+
 function checkWinner() {
   let roundWon = false;
   for (let i = 0; i < winConditions.length; i++) {
