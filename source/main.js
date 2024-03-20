@@ -40,10 +40,12 @@ function cellClicked() {
   updateCell(this, cellIndex);
   checkWinner();
 }
+
 function updateCell(cell, index) {
   options[index] = currentPlayer;
   cell.textContent = currentPlayer;
 }
+
 function changePlayer() {
   currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
   gameStatus.textContent = `${currentPlayer}'s turn`;
@@ -66,7 +68,7 @@ function checkWinner() {
     }
   }
   if (roundWon) {
-    gameStatus.textContent = `${currentPlayer} win!`;
+    gameStatus.textContent = `${currentPlayer} won!`;
     running = false;
   } else if (!options.includes('')) {
     gameStatus.textContent = `Draw!`;
